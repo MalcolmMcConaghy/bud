@@ -1,0 +1,20 @@
+$grey: rgba(211,211,211, 0.3);
+$lightblue: #add8e6;
+
+.transaction {
+  background-color: $lightblue;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  padding: 1em;
+  margin: 1em 0;
+
+  &__date {
+    margin-bottom: 0.5em;
+  }
+
+  &__details {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
