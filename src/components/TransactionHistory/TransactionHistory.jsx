@@ -1,4 +1,4 @@
-import React,  {Fragment} from 'react';
+import React from 'react';
 import Transaction from '../Transaction/Transaction';
 
 import './transactionHistory.scss';

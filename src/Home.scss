@@ -1,11 +1,14 @@
-$grey: rgba(211,211,211, 0.3);
 $lightblue: #add8e6;
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+.loading-spinner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-message {
+  padding: 1em;
 }
 
 .home {
@@ -29,5 +32,12 @@ body {
 
   &__account-balance {
     font-size: 1.2em;
+  }
+
+  @media (min-width: 768px) {
+    &__account-info {
+      align-self: initial;
+      width: 30em;
+    }
   }
 }

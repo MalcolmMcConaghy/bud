@@ -1,5 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import Loader from "react-loader-spinner";
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+
+import './Home.scss';
 
 function Home() {
     const [transactionalData, setTransactions] = useState();
@@ -34,11 +37,12 @@ function Home() {
         fetchTransactions();
     }, []);
 
-    if (isLoading) return "Loading..."
-    if (hasError) return "Error..."
+    if (isLoading) return <div className="loading-spinner" data-testid="loading-spinner"><Loader type="Circles" color="#00BFFF" height={80} width={80}/></div>
+    if (hasError) return <div className="error-message">Something went wrong. Please try again or try again later</div>
 
     return (
         <div className="home">
+            <h1>Accounts</h1>
             {(!isLoading && transactionalData) && (
                 <Fragment>
                     <div className="home__account-info">

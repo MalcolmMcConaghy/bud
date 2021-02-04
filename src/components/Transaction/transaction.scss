@@ -1,11 +1,7 @@
-$grey: rgba(211,211,211, 0.3);
 $lightblue: #add8e6;
 
 .transaction {
-  background-color: $lightblue;
-  border-radius: 0.5em;
   font-size: 0.9em;
-  padding: 1em;
   margin: 1em 0;
 
   &__date {
@@ -13,8 +9,11 @@ $lightblue: #add8e6;
   }
 
   &__details {
+    background-color: $lightblue;
+    border-radius: 0.5em;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 1em;
   }
 }

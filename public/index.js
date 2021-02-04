@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import './index.scss';
-import Home from './Home';
+import Home from '../src/Home';
 
 ReactDOM.render(<Home />, document.getElementById('root'));

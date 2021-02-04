@@ -59,7 +59,7 @@ describe('Home', () => {
       }
     );
 
-    await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
+    await waitForElementToBeRemoved(() => screen.getByTestId('loading-spinner'));
 
     expect(screen.getByText(/Transaction History/i)).toBeInTheDocument();
   });
@@ -79,8 +79,8 @@ describe('Home', () => {
       }
     );
 
-    await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
+    await waitForElementToBeRemoved(() => screen.getByTestId('loading-spinner'));
 
-    expect(screen.getByText(/Error.../i)).toBeInTheDocument();
+    expect(screen.getByText(/Something went wrong. Please try again or try again later/i)).toBeInTheDocument();
   });
 });

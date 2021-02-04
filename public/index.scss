@@ -1,0 +1,50 @@
+$lightblue: #add8e6;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.loading-spinner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-message {
+  padding: 1em;
+}
+
+.home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  &__account-info {
+    align-self: stretch;
+    background-color: $lightblue;
+    border-radius: 0.5em;
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+
+    > h3, div {
+      margin: 0.5em 0;
+    }
+  }
+
+  &__account-balance {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 768px) {
+    &__account-info {
+      align-self: initial;
+      width: 30em;
+    }
+  }
+}
