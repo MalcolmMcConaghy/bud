@@ -4,7 +4,7 @@ import TransactionHistory from './components/TransactionHistory/TransactionHisto
 function Home() {
     const [transactionalData, setTransactions] = useState();
     const [isLoading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const [hasError, setError] = useState(false);
 
     const fetchTransactions = async () => {
         setLoading(true);
@@ -34,11 +34,11 @@ function Home() {
         fetchTransactions();
     }, []);
 
+    if (isLoading) return "Loading..."
+    if (hasError) return "Error..."
+
     return (
         <div className="home">
-            {isLoading && (
-                <div>Loading</div>
-            )}
             {(!isLoading && transactionalData) && (
                 <Fragment>
                     <div className="home__account-info">
